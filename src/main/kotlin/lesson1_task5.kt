@@ -1,13 +1,13 @@
 fun main() {
-    val TOTAL_SECONDS: Int = 6480
 
-    val SECONDS_IN_MINUTE = 60
-    val SECONDS_IN_HOUR = SECONDS_IN_MINUTE * SECONDS_IN_MINUTE
+    val TOTAL_SECONDS : Int = 6480  //всего секунд
+    val SECONDS_IN_MINUTE = 60 //внес константу
 
-    val hours = TOTAL_SECONDS / SECONDS_IN_HOUR
-    val secondsAfterHours = TOTAL_SECONDS % SECONDS_IN_HOUR
-    val minutes = secondsAfterHours / SECONDS_IN_MINUTE
-    val seconds = secondsAfterHours % SECONDS_IN_MINUTE
+    val hours = TOTAL_SECONDS / (60*60)
+    val secondsAfterHours = TOTAL_SECONDS % (60*60) //сколько секунд после часов
+    val minutes = secondsAfterHours / SECONDS_IN_MINUTE //60 заменил на константу
+    val seconds = secondsAfterHours % SECONDS_IN_MINUTE //так же
 
     println("%02d:%02d:%02d".format(hours, minutes, seconds))
+
 }
